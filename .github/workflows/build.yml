@@ -2,7 +2,8 @@ name: Website Continuous Integration
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 
 job:
   build:
