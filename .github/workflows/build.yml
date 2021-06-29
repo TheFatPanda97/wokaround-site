@@ -24,6 +24,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          local: "dist"
-          remote: "src/dist"
+          local: "build"
+          remote: "src/build"
 
