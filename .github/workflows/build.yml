@@ -17,9 +17,7 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm run build
-      - run: ls
-      - run: pwd 
-      - name: copy file via ssh password
+      - name: deploying
         uses: garygrossgarten/github-action-scp@release
         with:
           host: ${{ secrets.HOST }}
@@ -27,5 +25,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           recursive: true
           local: "/home/runner/work/wokaround-site/wokaround-site/build/"
-          remote: "src/build"
+          remote: "src/"
 
