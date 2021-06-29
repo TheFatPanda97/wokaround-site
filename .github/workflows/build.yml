@@ -6,7 +6,9 @@ on:
 
 job:
   build:
+
     runs-on: ubuntu-latest
+    
     steps:
       - uses: action/checkout@v2
       - uses: actions/setup-node@v1
@@ -14,5 +16,14 @@ job:
           node-version: 12
       - run: npm ci
       - run: npm build
-      
+      - uses: actions/checkout@master
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          source: "dist"
+          target: "src/dist"
 
