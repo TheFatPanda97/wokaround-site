@@ -26,6 +26,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          local: "build"
+          local: "/home/runner/work/wokaround-site/wokaround-site/build"
           remote: "src/build"
 
