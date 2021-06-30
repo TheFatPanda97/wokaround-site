@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 
 interface Person {
   firstName: string;
@@ -10,12 +10,10 @@ interface Props {
   person: Person;
 }
 
-const TextField: FC<Props> = ({ person, text }) => {
-  return (
-    <div>
-      <input type="text" />
-    </div>
-  );
-};
+const TextField: FC<Props> = ({ person, text }) => (
+  <div>
+    <input type="text" />
+  </div>
+);
 
 export default TextField;
