@@ -17,6 +17,8 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm run build
+        env: 
+          CI: ""
       - name: deploying
         uses: garygrossgarten/github-action-scp@release
         with:
