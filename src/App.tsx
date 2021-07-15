@@ -1,10 +1,15 @@
 import React, { FC } from 'react';
-import TextField from './TextField';
+import { Button } from '@material-ui/core';
+
+import AppBar from './Common/Components/AppBar';
+import './App.scss';
 
 const App: FC = () => (
   <div>
-    <h1>Hello World</h1>
-    <TextField text="hello" person={{ firstName: 'Shawn', lastName: 'Hu' }} />
+    <Button className="test-button" variant="contained">
+      Click Me
+    </Button>
+    <AppBar />
   </div>
 );
 
